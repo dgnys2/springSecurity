@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: "pass"
+      POSTGRES_USER: "postgres"
+      POSTGRES_DB: "springboot"
+
+#    volumes:
+#      - "./init/:/docker-entrypoint-initdb.d/"
+    ports:
+      - 5432:5432
+    container_name: postgres
